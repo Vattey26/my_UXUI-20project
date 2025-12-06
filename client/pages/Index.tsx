@@ -43,7 +43,7 @@ const mockPosts: Post[] = [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop",
     title: "All Ferrari are depressed",
     image:
-      "https://www.facebook.com/groups/ScuderiaFans/posts/1569757510382090/",
+      "https://scontent.fpnh5-3.fna.fbcdn.net/v/t39.30808-6/485727031_639421669051405_2868409652840885414_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHjhyGON9PafKcfGy6rbF0gS3tBOWD8jjpLe0E5YPyOOvNjS7yX-eEwyvARaAh5bzHdJhYnH6elH3mpP8Bykg0w&_nc_ohc=9osR3MpFk7AQ7kNvwEX93RX&_nc_oc=AdlRTZIjGACKWUQIJh1ASpC5B47GY8sqnUWiTmzhdHo4-xPD7ebHvAoog92DBfReKR4&_nc_zt=23&_nc_ht=scontent.fpnh5-3.fna&_nc_gid=yihislaXkelro9u20cuGHw",
     content:
       "Two Ferrari depressed drivers even after a pole. The team's struggles continue as both drivers fail to capitalize on qualifying performance.",
     likes: 1850,
