@@ -105,19 +105,19 @@ export default function Index() {
       id: 1,
       name: "F1 Drama 101",
       avatar:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=48&h=48&fit=crop",
+        "https://cdn.builder.io/api/v1/image/assets%2Ff6237c983b1c43f08538628b85b3ee4a%2F51a9358fb129430aa0b84322f8006524?format=webp&width=800",
     },
     {
       id: 2,
       name: "Ferrari Depression episod",
       avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop",
+        "https://cdn.builder.io/api/v1/image/assets%2Ff6237c983b1c43f08538628b85b3ee4a%2F11249670dadf435d8b6baa7c977f2a6f?format=webp&width=800",
     },
     {
       id: 3,
       name: "Wat is red bull doing?",
       avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop",
+        "https://cdn.builder.io/api/v1/image/assets%2Ff6237c983b1c43f08538628b85b3ee4a%2F72a9f236e9c24963b257496a3b3ec099?format=webp&width=800",
     },
   ]);
 
