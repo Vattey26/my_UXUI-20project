@@ -322,7 +322,7 @@ export default function Index() {
         <div className="bg-gradient-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md rounded-3xl p-6 overflow-hidden border border-gray-800/50 animate-fadeInUp flex-1">
           <h3 className="text-2xl font-display font-black mb-5 text-f1-red">Recent</h3>
 
-          <div className="space-y-4 overflow-y-auto max-h-96 pr-2">
+          <div className="space-y-4">
             {mockRecentPosts.map((item, idx) => (
               <div
                 key={item.id}
