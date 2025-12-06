@@ -36,6 +36,34 @@ const mockPosts: Post[] = [
     comments: 127,
     liked: false,
   },
+  {
+    id: 2,
+    author: "Ferrari Depression episod",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop",
+    title: "All Ferrari are depressed",
+    image:
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500&h=300&fit=crop",
+    content:
+      "Two Ferrari depressed drivers even after a pole. The team's struggles continue as both drivers fail to capitalize on qualifying performance.",
+    likes: 1850,
+    comments: 342,
+    liked: false,
+  },
+  {
+    id: 3,
+    author: "Wat is red bull doing?",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop",
+    title: 'Liam Lawson: "I was naive to think I would be given the time to adapt" at Red Bull',
+    image:
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
+    content:
+      'Red Bull driver Liam Lawson reflects on his challenging adaptation period, expressing disappointment about the lack of patience from the team. "Turbo" struggled to find his rhythm in the competitive Red Bull environment.',
+    likes: 3120,
+    comments: 567,
+    liked: false,
+  },
 ];
 
 const mockRecentPosts: RecentPost[] = [
