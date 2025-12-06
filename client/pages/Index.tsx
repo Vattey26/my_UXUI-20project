@@ -1,4 +1,13 @@
-import { Heart, MessageCircle, Share, Home, Search, User, LogOut, MoreHorizontal } from "lucide-react";
+import {
+  Heart,
+  MessageCircle,
+  Share,
+  Home,
+  Search,
+  User,
+  LogOut,
+  MoreHorizontal,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -55,7 +64,8 @@ const mockPosts: Post[] = [
     author: "Wat is red bull doing?",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop",
-    title: 'Liam Lawson: "I was naive to think I would be given the time to adapt" at Red Bull',
+    title:
+      'Liam Lawson: "I was naive to think I would be given the time to adapt" at Red Bull',
     image:
       "https://manofmany.com/_next/image?url=https%3A%2F%2Fapi.manofmany.com%2Fwp-content%2Fuploads%2F2025%2F03%2FLiam-Lawson-11.jpg&w=1200&q=75",
     content:
@@ -85,7 +95,8 @@ const mockRecentPosts: RecentPost[] = [
   {
     id: 3,
     source: "formulaDank",
-    title: "is a red bull fan, I don't think anyone is wrong but rants from the fans",
+    title:
+      "is a red bull fan, I don't think anyone is wrong but rants from the fans",
     image:
       "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=100&h=100&fit=crop",
   },
@@ -130,8 +141,8 @@ export default function Index() {
               liked: !post.liked,
               likes: post.liked ? post.likes - 1 : post.likes + 1,
             }
-          : post
-      )
+          : post,
+      ),
     );
   };
 
@@ -141,26 +152,40 @@ export default function Index() {
       <div className="w-56 border-r border-gray-800/50 flex flex-col bg-dark-bg backdrop-blur-sm sticky top-0 h-screen animate-fadeIn">
         <div className="p-6 border-b border-gray-800/50">
           <div className="text-2xl font-display font-black bg-gradient-to-r from-f1-red to-red-500 bg-clip-text text-transparent">
-            F1<br />DRAMA
+            F1
+            <br />
+            DRAMA
           </div>
         </div>
 
         <nav className="flex-1 p-6 space-y-8 overflow-y-auto">
           <div className="space-y-4">
             <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
-              <Home size={24} className="text-f1-red group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-lg font-semibold group-hover:text-f1-red transition-colors duration-300">Home</span>
+              <Home
+                size={24}
+                className="text-f1-red group-hover:scale-110 transition-transform duration-300"
+              />
+              <span className="text-lg font-semibold group-hover:text-f1-red transition-colors duration-300">
+                Home
+              </span>
             </div>
             <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
-              <Search size={24} className="group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-lg font-semibold group-hover:text-f1-red transition-colors duration-300">Search</span>
+              <Search
+                size={24}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+              <span className="text-lg font-semibold group-hover:text-f1-red transition-colors duration-300">
+                Search
+              </span>
             </div>
             <Link to="/stream">
               <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
                 <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-f1-red to-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white text-xs font-bold">▶</span>
                 </div>
-                <span className="text-lg font-semibold group-hover:text-f1-red transition-colors duration-300">Stream</span>
+                <span className="text-lg font-semibold group-hover:text-f1-red transition-colors duration-300">
+                  Stream
+                </span>
               </div>
             </Link>
           </div>
@@ -181,7 +206,9 @@ export default function Index() {
                     alt={user.name}
                     className="w-10 h-10 rounded-full group-hover:ring-2 ring-f1-red transition-all duration-300"
                   />
-                  <span className="text-sm font-medium truncate group-hover:text-f1-red transition-colors duration-300">{user.name}</span>
+                  <span className="text-sm font-medium truncate group-hover:text-f1-red transition-colors duration-300">
+                    {user.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -190,13 +217,23 @@ export default function Index() {
 
         <div className="p-6 border-t border-gray-800/50 space-y-2">
           <div className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 group">
-            <User size={24} className="group-hover:text-f1-red transition-colors duration-300" />
-            <span className="font-medium group-hover:text-f1-red transition-colors duration-300">Profile</span>
+            <User
+              size={24}
+              className="group-hover:text-f1-red transition-colors duration-300"
+            />
+            <span className="font-medium group-hover:text-f1-red transition-colors duration-300">
+              Profile
+            </span>
           </div>
           <Link to="/login">
             <div className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 group">
-              <LogOut size={24} className="group-hover:text-f1-red transition-colors duration-300" />
-              <span className="font-medium group-hover:text-f1-red transition-colors duration-300">Log Out</span>
+              <LogOut
+                size={24}
+                className="group-hover:text-f1-red transition-colors duration-300"
+              />
+              <span className="font-medium group-hover:text-f1-red transition-colors duration-300">
+                Log Out
+              </span>
             </div>
           </Link>
         </div>
@@ -249,8 +286,12 @@ export default function Index() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 justify-between">
                     <div>
-                      <span className="font-display font-bold hover:text-f1-red transition-colors duration-300">{post.author}</span>
-                      <span className="text-gray-500 text-sm ml-2">@drama · 2h</span>
+                      <span className="font-display font-bold hover:text-f1-red transition-colors duration-300">
+                        {post.author}
+                      </span>
+                      <span className="text-gray-500 text-sm ml-2">
+                        @drama · 2h
+                      </span>
                     </div>
                     <button className="opacity-0 group-hover:opacity-100 p-2 hover:bg-gray-900 rounded-full transition-all duration-300">
                       <MoreHorizontal size={18} className="text-gray-500" />
@@ -258,7 +299,9 @@ export default function Index() {
                   </div>
 
                   <div className="mt-3">
-                    <h3 className="font-display font-bold text-lg text-white">{post.title}</h3>
+                    <h3 className="font-display font-bold text-lg text-white">
+                      {post.title}
+                    </h3>
                     <p className="text-gray-300 text-base mt-2 leading-relaxed">
                       {post.content}
                     </p>
@@ -277,7 +320,9 @@ export default function Index() {
                       <div className="p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
                         <MessageCircle size={18} />
                       </div>
-                      <span className="text-sm font-medium">{post.comments}</span>
+                      <span className="text-sm font-medium">
+                        {post.comments}
+                      </span>
                     </div>
                     <div
                       className="flex items-center gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300"
@@ -310,7 +355,10 @@ export default function Index() {
       <div className="w-80 p-6 border-l border-gray-800/50 flex flex-col bg-gradient-to-b from-gray-900/30 to-transparent sticky top-0 h-screen animate-slideInLeft">
         {/* Search Bar */}
         <div className="bg-gray-900/60 backdrop-blur-md rounded-full px-5 py-3 mb-6 flex items-center gap-3 border border-gray-800/50 hover:border-f1-red/30 transition-all duration-300 group">
-          <Search size={20} className="text-gray-500 group-hover:text-f1-red transition-colors duration-300" />
+          <Search
+            size={20}
+            className="text-gray-500 group-hover:text-f1-red transition-colors duration-300"
+          />
           <input
             type="text"
             placeholder="Search drama..."
@@ -320,7 +368,9 @@ export default function Index() {
 
         {/* Recent Section */}
         <div className="bg-gradient-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md rounded-3xl p-6 overflow-hidden border border-gray-800/50 animate-fadeInUp flex-1">
-          <h3 className="text-2xl font-display font-black mb-5 text-f1-red">Recent</h3>
+          <h3 className="text-2xl font-display font-black mb-5 text-f1-red">
+            Recent
+          </h3>
 
           <div className="space-y-4">
             {mockRecentPosts.map((item, idx) => (

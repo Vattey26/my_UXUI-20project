@@ -30,14 +30,21 @@ export default function Login() {
         {/* Animated background effect */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-f1-red rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-f1-red rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+          <div
+            className="absolute bottom-0 right-0 w-96 h-96 bg-f1-red rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
 
         <div className="text-center relative z-10 animate-fadeInUp">
           <h1 className="text-7xl font-display font-black text-f1-red tracking-tighter drop-shadow-lg">
-            F1<br />NEWS
+            F1
+            <br />
+            NEWS
           </h1>
-          <p className="text-gray-400 text-sm mt-4 tracking-widest uppercase font-medium">Drama Central</p>
+          <p className="text-gray-400 text-sm mt-4 tracking-widest uppercase font-medium">
+            Drama Central
+          </p>
         </div>
       </div>
 
@@ -58,7 +65,9 @@ export default function Login() {
         {/* Form container */}
         <div className="w-full max-w-md">
           <div className="mb-10">
-            <h2 className="text-5xl font-display font-black text-gray-900 mb-3">Log In</h2>
+            <h2 className="text-5xl font-display font-black text-gray-900 mb-3">
+              Log In
+            </h2>
             <p className="text-gray-600 text-lg">Welcome fellow F1 lover</p>
           </div>
 
@@ -111,7 +120,10 @@ export default function Login() {
 
           <p className="text-center text-gray-600 mt-8 text-sm">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-f1-red font-semibold hover:underline transition-colors duration-200">
+            <Link
+              to="/signup"
+              className="text-f1-red font-semibold hover:underline transition-colors duration-200"
+            >
               Sign up now
             </Link>
           </p>
