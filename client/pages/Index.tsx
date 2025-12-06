@@ -29,7 +29,7 @@ const mockPosts: Post[] = [
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=40&h=40&fit=crop",
     title: "George and Max beef",
     image:
-      "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=500&h=300&fit=crop",
+      "https://r.testifier.nl/Acbs8526SDKI/resizing_type:fit/width:3840/height:2560/plain/https://s3-newsifier.ams3.digitaloceanspaces.com/gpblog.com/images/2025-06/george-russell-en-max-verstappen.jpg@webp",
     content:
       "George Russell has accused Max Verstappen of BULLYING other drivers for years.\nTheir feud has rapidly escalated.",
     likes: 2400,
@@ -43,7 +43,7 @@ const mockPosts: Post[] = [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop",
     title: "All Ferrari are depressed",
     image:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500&h=300&fit=crop",
+      "https://www.facebook.com/groups/ScuderiaFans/posts/1569757510382090/",
     content:
       "Two Ferrari depressed drivers even after a pole. The team's struggles continue as both drivers fail to capitalize on qualifying performance.",
     likes: 1850,
@@ -57,7 +57,7 @@ const mockPosts: Post[] = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop",
     title: 'Liam Lawson: "I was naive to think I would be given the time to adapt" at Red Bull',
     image:
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
+      "https://manofmany.com/_next/image?url=https%3A%2F%2Fapi.manofmany.com%2Fwp-content%2Fuploads%2F2025%2F03%2FLiam-Lawson-11.jpg&w=1200&q=75",
     content:
       'Red Bull driver Liam Lawson reflects on his challenging adaptation period, expressing disappointment about the lack of patience from the team. "Turbo" struggled to find his rhythm in the competitive Red Bull environment.',
     likes: 3120,
