@@ -282,7 +282,7 @@ export default function Index() {
       </div>
 
       {/* Center Feed - Responsive */}
-      <div className="flex-1 max-w-2xl border-r border-gray-800/50 flex flex-col w-full md:w-auto">
+      <div className="flex-1 max-w-2xl border-r border-gray-800/50 flex flex-col w-full md:w-auto mx-auto">
         {/* Header */}
         <div className="sticky top-0 bg-dark-bg/90 backdrop-blur-md border-b border-gray-800/50 px-4 md:px-6 py-3 md:py-4 z-10 animate-fadeIn">
           <h2 className="text-xl md:text-2xl font-display font-black text-f1-red pt-8 md:pt-0">
