@@ -150,9 +150,33 @@ export default function Index() {
   };
 
   return (
-    <div className="flex h-screen bg-dark-bg text-white overflow-hidden">
-      {/* Left Sidebar */}
-      <div className="w-56 border-r border-gray-800/50 flex flex-col bg-dark-bg backdrop-blur-sm sticky top-0 h-screen animate-fadeIn">
+    <div className="flex h-screen bg-dark-bg text-white overflow-hidden relative">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="fixed top-4 left-4 z-50 md:hidden p-2 hover:bg-gray-900/80 rounded-lg transition-colors duration-300"
+      >
+        {mobileMenuOpen ? (
+          <X size={24} className="text-f1-red" />
+        ) : (
+          <Menu size={24} className="text-f1-red" />
+        )}
+      </button>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Left Sidebar - Responsive */}
+      <div
+        className={`${
+          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0 w-56 border-r border-gray-800/50 flex flex-col bg-dark-bg backdrop-blur-sm sticky top-0 h-screen animate-fadeIn fixed md:relative z-40 transition-transform duration-300 md:transition-none`}
+      >
         <div className="p-6 border-b border-gray-800/50">
           <div className="text-2xl font-display font-black bg-gradient-to-r from-f1-red to-red-500 bg-clip-text text-transparent">
             F1
