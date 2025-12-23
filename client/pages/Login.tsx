@@ -75,7 +75,7 @@ export default function Login() {
 
           <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
             <div className="group">
-              <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
+              <label className="block text-gray-800 font-semibold mb-2 md:mb-3 text-xs md:text-sm tracking-wide">
                 USERNAME
               </label>
               <Input
@@ -84,12 +84,12 @@ export default function Login() {
                 placeholder="Enter your username"
                 value={formData.username}
                 onChange={handleChange}
-                className="w-full px-5 py-3.5 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium"
+                className="w-full px-3 md:px-5 py-2.5 md:py-3.5 bg-white border-2 border-gray-300 rounded-lg md:rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium text-sm md:text-base"
               />
             </div>
 
             <div className="group">
-              <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
+              <label className="block text-gray-800 font-semibold mb-2 md:mb-3 text-xs md:text-sm tracking-wide">
                 PASSWORD
               </label>
               <Input
@@ -98,9 +98,9 @@ export default function Login() {
                 placeholder="Enter your password"
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full px-5 py-3.5 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium"
+                className="w-full px-3 md:px-5 py-2.5 md:py-3.5 bg-white border-2 border-gray-300 rounded-lg md:rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium text-sm md:text-base"
               />
-              <div className="text-right mt-3">
+              <div className="text-right mt-2 md:mt-3">
                 <a
                   href="#"
                   className="text-xs font-semibold text-gray-700 hover:text-f1-red transition-colors duration-200 uppercase tracking-widest"
@@ -114,13 +114,13 @@ export default function Login() {
               type="submit"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="w-full mt-10 py-4 bg-gradient-to-r from-f1-red to-red-700 text-white font-display font-bold rounded-xl hover:shadow-2xl hover:shadow-f1-red/50 transition-all duration-300 text-lg uppercase tracking-wide transform hover:scale-105 active:scale-95"
+              className="w-full mt-6 md:mt-10 py-3 md:py-4 bg-gradient-to-r from-f1-red to-red-700 text-white font-display font-bold rounded-lg md:rounded-xl hover:shadow-2xl hover:shadow-f1-red/50 transition-all duration-300 text-base md:text-lg uppercase tracking-wide transform hover:scale-105 active:scale-95"
             >
               Log In
             </button>
           </form>
 
-          <p className="text-center text-gray-600 mt-8 text-sm">
+          <p className="text-center text-gray-600 mt-6 md:mt-8 text-xs md:text-sm">
             Don't have an account?{" "}
             <Link
               to="/signup"
