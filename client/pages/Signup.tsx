@@ -79,7 +79,7 @@ export default function Signup() {
 
           <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
             <div className="group">
-              <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
+              <label className="block text-gray-800 font-semibold mb-2 md:mb-3 text-xs md:text-sm tracking-wide">
                 EMAIL
               </label>
               <Input
@@ -90,12 +90,12 @@ export default function Signup() {
                 onChange={handleChange}
                 onFocus={() => setFocusedField("email")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full px-5 py-3.5 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium"
+                className="w-full px-3 md:px-5 py-2.5 md:py-3.5 bg-white border-2 border-gray-300 rounded-lg md:rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium text-sm md:text-base"
               />
             </div>
 
             <div className="group">
-              <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
+              <label className="block text-gray-800 font-semibold mb-2 md:mb-3 text-xs md:text-sm tracking-wide">
                 USERNAME
               </label>
               <Input
@@ -106,12 +106,12 @@ export default function Signup() {
                 onChange={handleChange}
                 onFocus={() => setFocusedField("username")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full px-5 py-3.5 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium"
+                className="w-full px-3 md:px-5 py-2.5 md:py-3.5 bg-white border-2 border-gray-300 rounded-lg md:rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium text-sm md:text-base"
               />
             </div>
 
             <div className="group">
-              <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
+              <label className="block text-gray-800 font-semibold mb-2 md:mb-3 text-xs md:text-sm tracking-wide">
                 PASSWORD
               </label>
               <Input
@@ -122,12 +122,12 @@ export default function Signup() {
                 onChange={handleChange}
                 onFocus={() => setFocusedField("password")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full px-5 py-3.5 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium"
+                className="w-full px-3 md:px-5 py-2.5 md:py-3.5 bg-white border-2 border-gray-300 rounded-lg md:rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium text-sm md:text-base"
               />
             </div>
 
             <div className="group">
-              <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
+              <label className="block text-gray-800 font-semibold mb-2 md:mb-3 text-xs md:text-sm tracking-wide">
                 CONFIRM PASSWORD
               </label>
               <Input
@@ -138,21 +138,21 @@ export default function Signup() {
                 onChange={handleChange}
                 onFocus={() => setFocusedField("confirmPassword")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full px-5 py-3.5 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium"
+                className="w-full px-3 md:px-5 py-2.5 md:py-3.5 bg-white border-2 border-gray-300 rounded-lg md:rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-f1-red focus:ring-2 focus:ring-f1-red/30 transition-all duration-300 font-medium text-sm md:text-base"
               />
             </div>
 
-            <div className="flex items-center gap-3 py-2 mt-6">
+            <div className="flex items-center gap-2 md:gap-3 py-2 mt-4 md:mt-6">
               <Checkbox
                 id="terms"
                 name="agreeTerms"
                 checked={formData.agreeTerms}
                 onChange={handleChange}
-                className="border-2 border-gray-300 rounded w-5 h-5 cursor-pointer accent-f1-red transition-all duration-300"
+                className="border-2 border-gray-300 rounded w-4 md:w-5 h-4 md:h-5 cursor-pointer accent-f1-red transition-all duration-300 flex-shrink-0"
               />
               <label
                 htmlFor="terms"
-                className="text-sm text-gray-700 cursor-pointer hover:text-gray-900 transition-colors duration-200 font-medium"
+                className="text-xs md:text-sm text-gray-700 cursor-pointer hover:text-gray-900 transition-colors duration-200 font-medium"
               >
                 I agree to the Terms & Conditions
               </label>
@@ -160,13 +160,13 @@ export default function Signup() {
 
             <button
               type="submit"
-              className="w-full mt-10 py-4 bg-gradient-to-r from-f1-red to-red-700 text-white font-display font-bold rounded-xl hover:shadow-2xl hover:shadow-f1-red/50 transition-all duration-300 text-lg uppercase tracking-wide transform hover:scale-105 active:scale-95"
+              className="w-full mt-6 md:mt-10 py-3 md:py-4 bg-gradient-to-r from-f1-red to-red-700 text-white font-display font-bold rounded-lg md:rounded-xl hover:shadow-2xl hover:shadow-f1-red/50 transition-all duration-300 text-base md:text-lg uppercase tracking-wide transform hover:scale-105 active:scale-95"
             >
               Next →
             </button>
           </form>
 
-          <p className="text-center text-gray-600 mt-8 text-sm">
+          <p className="text-center text-gray-600 mt-6 md:mt-8 text-xs md:text-sm">
             Already have an account?{" "}
             <Link
               to="/login"
