@@ -175,7 +175,7 @@ export default function Index() {
       <div
         className={`${
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } w-56 border-r border-gray-800/50 flex flex-col bg-dark-bg backdrop-blur-sm sticky top-0 h-screen animate-fadeIn absolute md:relative z-40 transition-transform duration-300 md:transition-none md:translate-x-0`}
+        } w-56 border-r border-gray-800/50 flex flex-col bg-dark-bg backdrop-blur-sm h-screen animate-fadeIn absolute md:relative md:sticky top-0 z-40 transition-transform duration-300 md:transition-none`}
       >
         <div className="p-6 border-b border-gray-800/50">
           <div className="text-2xl font-display font-black bg-gradient-to-r from-f1-red to-red-500 bg-clip-text text-transparent">
