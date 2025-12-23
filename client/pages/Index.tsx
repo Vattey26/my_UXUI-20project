@@ -150,7 +150,7 @@ export default function Index() {
   };
 
   return (
-    <div className="flex h-screen bg-dark-bg text-white overflow-hidden relative">
+    <div className="flex h-screen w-screen bg-dark-bg text-white overflow-hidden relative">
       {/* Mobile Menu Button */}
       <button
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
