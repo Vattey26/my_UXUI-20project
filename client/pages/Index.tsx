@@ -113,6 +113,7 @@ const mockRecentPosts: RecentPost[] = [
 
 export default function Index() {
   const [posts, setPosts] = useState(mockPosts);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [following, setFollowing] = useState([
     {
       id: 1,
