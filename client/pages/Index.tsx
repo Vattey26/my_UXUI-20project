@@ -318,35 +318,35 @@ export default function Index() {
           {posts.map((post, idx) => (
             <div
               key={post.id}
-              className="border-b border-gray-800/50 p-6 hover:bg-gray-900/30 cursor-pointer transition-all duration-300 group animate-fadeInUp"
+              className="border-b border-gray-800/50 p-4 md:p-6 hover:bg-gray-900/30 cursor-pointer transition-all duration-300 group animate-fadeInUp"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
-              <div className="flex gap-4">
+              <div className="flex gap-3 md:gap-4">
                 <img
                   src={post.avatar}
                   alt={post.author}
-                  className="w-12 h-12 rounded-full ring-2 ring-gray-800/50 group-hover:ring-f1-red/50 transition-all duration-300"
+                  className="w-10 md:w-12 h-10 md:h-12 rounded-full ring-2 ring-gray-800/50 group-hover:ring-f1-red/50 transition-all duration-300 flex-shrink-0"
                 />
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 justify-between">
-                    <div>
-                      <span className="font-display font-bold hover:text-f1-red transition-colors duration-300">
+                    <div className="min-w-0 flex-1">
+                      <span className="font-display font-bold hover:text-f1-red transition-colors duration-300 text-sm md:text-base truncate block">
                         {post.author}
                       </span>
-                      <span className="text-gray-500 text-sm ml-2">
+                      <span className="text-gray-500 text-xs md:text-sm ml-0 md:ml-2">
                         @drama · 2h
                       </span>
                     </div>
-                    <button className="opacity-0 group-hover:opacity-100 p-2 hover:bg-gray-900 rounded-full transition-all duration-300">
-                      <MoreHorizontal size={18} className="text-gray-500" />
+                    <button className="opacity-0 group-hover:opacity-100 p-2 hover:bg-gray-900 rounded-full transition-all duration-300 flex-shrink-0">
+                      <MoreHorizontal size={16} className="text-gray-500" />
                     </button>
                   </div>
 
-                  <div className="mt-3">
-                    <h3 className="font-display font-bold text-lg text-white">
+                  <div className="mt-2 md:mt-3">
+                    <h3 className="font-display font-bold text-base md:text-lg text-white">
                       {post.title}
                     </h3>
-                    <p className="text-gray-300 text-base mt-2 leading-relaxed">
+                    <p className="text-gray-300 text-sm md:text-base mt-2 leading-relaxed">
                       {post.content}
                     </p>
 
@@ -354,37 +354,39 @@ export default function Index() {
                       <img
                         src={post.image}
                         alt="Post"
-                        className="rounded-2xl w-full mt-4 border border-gray-800/50 group-hover:border-gray-700 transition-all duration-300 hover:brightness-110"
+                        className="rounded-xl md:rounded-2xl w-full mt-3 md:mt-4 border border-gray-800/50 group-hover:border-gray-700 transition-all duration-300 hover:brightness-110"
                       />
                     )}
                   </div>
 
-                  <div className="flex justify-between mt-4 text-gray-500 max-w-xs">
-                    <div className="flex items-center gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300">
-                      <div className="p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
-                        <MessageCircle size={18} />
+                  <div className="flex justify-between mt-3 md:mt-4 text-gray-500 max-w-xs gap-2">
+                    <div className="flex items-center gap-1 md:gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300">
+                      <div className="p-1.5 md:p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
+                        <MessageCircle size={16} />
                       </div>
-                      <span className="text-sm font-medium">
+                      <span className="text-xs md:text-sm font-medium hidden sm:inline">
                         {post.comments}
                       </span>
                     </div>
                     <div
-                      className="flex items-center gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300"
+                      className="flex items-center gap-1 md:gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300"
                       onClick={() => toggleLike(post.id)}
                     >
-                      <div className="p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
+                      <div className="p-1.5 md:p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
                         <Heart
-                          size={18}
+                          size={16}
                           fill={post.liked ? "#C30C0C" : "none"}
                           color={post.liked ? "#C30C0C" : "currentColor"}
                           className="transition-all duration-300"
                         />
                       </div>
-                      <span className="text-sm font-medium">{post.likes}</span>
+                      <span className="text-xs md:text-sm font-medium hidden sm:inline">
+                        {post.likes}
+                      </span>
                     </div>
-                    <div className="flex items-center gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300">
-                      <div className="p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
-                        <Share size={18} />
+                    <div className="flex items-center gap-1 md:gap-2 hover:text-f1-red cursor-pointer group/btn transition-colors duration-300">
+                      <div className="p-1.5 md:p-2 rounded-full group-hover/btn:bg-f1-red/10 transition-colors duration-300">
+                        <Share size={16} />
                       </div>
                     </div>
                   </div>
