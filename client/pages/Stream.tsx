@@ -5,35 +5,38 @@ import { useState } from "react";
 export default function Stream() {
   const navigate = useNavigate();
   const [liked, setLiked] = useState(false);
+  const [chatOpen, setChatOpen] = useState(true);
 
   return (
-    <div className="min-h-screen bg-dark-bg text-white">
+    <div className="min-h-screen bg-dark-bg text-white flex flex-col">
       {/* Header */}
-      <div className="sticky top-0 z-50 bg-dark-bg/90 backdrop-blur-md border-b border-gray-800/50 px-6 py-4">
+      <div className="sticky top-0 z-50 bg-dark-bg/90 backdrop-blur-md border-b border-gray-800/50 px-4 md:px-6 py-3 md:py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center gap-3 hover:text-f1-red transition-colors duration-300 group"
+            className="flex items-center gap-2 md:gap-3 hover:text-f1-red transition-colors duration-300 group"
           >
             <ArrowLeft
-              size={24}
-              className="group-hover:scale-110 transition-transform duration-300"
+              size={20}
+              className="md:w-6 md:h-6 group-hover:scale-110 transition-transform duration-300"
             />
-            <span className="font-semibold text-lg hidden sm:inline">Back</span>
+            <span className="font-semibold text-sm md:text-lg hidden sm:inline">
+              Back
+            </span>
           </button>
 
           <div className="flex-1 flex justify-center">
-            <h1 className="text-2xl font-display font-black text-f1-red">
+            <h1 className="text-xl md:text-2xl font-display font-black text-f1-red">
               F1 LIVE
             </h1>
           </div>
 
-          <div className="w-24"></div>
+          <div className="w-16 md:w-24"></div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="flex-1 max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 h-full">
           {/* Main Video Section */}
           <div className="lg:col-span-2 space-y-6 animate-fadeInUp">
             {/* Video Container */}
