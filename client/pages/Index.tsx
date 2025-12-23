@@ -397,8 +397,8 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Right Sidebar */}
-      <div className="w-80 p-6 border-l border-gray-800/50 flex flex-col bg-gradient-to-b from-gray-900/30 to-transparent sticky top-0 h-screen animate-slideInLeft">
+      {/* Right Sidebar - Hidden on mobile/tablet, visible on lg */}
+      <div className="hidden lg:flex w-80 p-6 border-l border-gray-800/50 flex-col bg-gradient-to-b from-gray-900/30 to-transparent sticky top-0 h-screen animate-slideInLeft">
         {/* Search Bar */}
         <div className="bg-gray-900/60 backdrop-blur-md rounded-full px-5 py-3 mb-6 flex items-center gap-3 border border-gray-800/50 hover:border-f1-red/30 transition-all duration-300 group">
           <Search
