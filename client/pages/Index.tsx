@@ -187,7 +187,10 @@ export default function Index() {
 
         <nav className="flex-1 p-6 space-y-8 overflow-y-auto">
           <div className="space-y-4">
-            <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
+            <div
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group"
+            >
               <Home
                 size={24}
                 className="text-f1-red group-hover:scale-110 transition-transform duration-300"
@@ -196,7 +199,10 @@ export default function Index() {
                 Home
               </span>
             </div>
-            <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
+            <div
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group"
+            >
               <Search
                 size={24}
                 className="group-hover:scale-110 transition-transform duration-300"
@@ -205,7 +211,10 @@ export default function Index() {
                 Search
               </span>
             </div>
-            <Link to="/stream">
+            <Link
+              to="/stream"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
                 <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-f1-red to-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white text-xs font-bold">▶</span>
