@@ -138,14 +138,14 @@ export default function Stream() {
             </div>
           </div>
 
-          {/* Sidebar - Chat/Comments */}
-          <div className="lg:col-span-1 animate-slideInLeft">
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md rounded-2xl p-6 border border-gray-800/50 h-screen max-h-96 lg:max-h-full flex flex-col sticky top-24">
-              <h3 className="text-xl font-display font-black text-f1-red mb-4">
+          {/* Sidebar - Chat/Comments - Hidden on mobile, visible on lg */}
+          <div className="hidden lg:block lg:col-span-1 animate-slideInLeft">
+            <div className="bg-gradient-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md rounded-2xl p-5 md:p-6 border border-gray-800/50 h-96 lg:max-h-full flex flex-col sticky top-24">
+              <h3 className="text-lg md:text-xl font-display font-black text-f1-red mb-3 md:mb-4">
                 Live Chat
               </h3>
 
-              <div className="flex-1 overflow-y-auto space-y-4 mb-4 pr-2">
+              <div className="flex-1 overflow-y-auto space-y-3 mb-3 md:mb-4 pr-2">
                 {[
                   {
                     name: "Max Fan",
@@ -170,31 +170,35 @@ export default function Stream() {
                 ].map((chat, idx) => (
                   <div
                     key={idx}
-                    className="hover:bg-gray-800/50 p-3 rounded-lg transition-colors duration-300 animate-fadeInUp"
+                    className="hover:bg-gray-800/50 p-2 md:p-3 rounded-lg transition-colors duration-300 animate-fadeInUp"
                     style={{ animationDelay: `${idx * 100}ms` }}
                   >
                     <div className="flex items-start gap-2">
                       <div
-                        className={`w-8 h-8 rounded-full bg-gradient-to-br ${chat.color} flex-shrink-0`}
+                        className={`w-7 md:w-8 h-7 md:h-8 rounded-full bg-gradient-to-br ${chat.color} flex-shrink-0`}
                       ></div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-sm">{chat.name}</p>
-                        <p className="text-gray-300 text-sm">{chat.message}</p>
+                        <p className="font-semibold text-xs md:text-sm">
+                          {chat.name}
+                        </p>
+                        <p className="text-gray-300 text-xs md:text-sm">
+                          {chat.message}
+                        </p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="flex gap-2 mt-auto pt-4 border-t border-gray-800/50">
+              <div className="flex gap-2 mt-auto pt-3 md:pt-4 border-t border-gray-800/50">
                 <input
                   type="text"
                   placeholder="Send a message..."
-                  className="flex-1 bg-gray-800/50 rounded-full px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-f1-red/50 transition-all duration-300 placeholder-gray-600"
+                  className="flex-1 bg-gray-800/50 rounded-full px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm outline-none focus:ring-2 focus:ring-f1-red/50 transition-all duration-300 placeholder-gray-600"
                 />
-                <button className="bg-f1-red text-white rounded-full p-2 hover:bg-red-700 transition-colors duration-300 hover:scale-110 transform">
+                <button className="bg-f1-red text-white rounded-full p-1.5 md:p-2 hover:bg-red-700 transition-colors duration-300 hover:scale-110 transform flex-shrink-0">
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 md:w-5 h-4 md:h-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
