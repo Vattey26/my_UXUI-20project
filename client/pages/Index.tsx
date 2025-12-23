@@ -252,7 +252,10 @@ export default function Index() {
         </nav>
 
         <div className="p-6 border-t border-gray-800/50 space-y-2">
-          <div className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 group">
+          <div
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 group"
+          >
             <User
               size={24}
               className="group-hover:text-f1-red transition-colors duration-300"
@@ -261,7 +264,10 @@ export default function Index() {
               Profile
             </span>
           </div>
-          <Link to="/login">
+          <Link
+            to="/login"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <div className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 group">
               <LogOut
                 size={24}
