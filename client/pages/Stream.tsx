@@ -5,7 +5,6 @@ import { useState } from "react";
 export default function Stream() {
   const navigate = useNavigate();
   const [liked, setLiked] = useState(false);
-  const [chatOpen, setChatOpen] = useState(true);
 
   return (
     <div className="min-h-screen bg-dark-bg text-white flex flex-col">
