@@ -38,9 +38,9 @@ export default function Stream() {
       <div className="flex-1 max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 h-full">
           {/* Main Video Section */}
-          <div className="lg:col-span-2 space-y-6 animate-fadeInUp">
+          <div className="lg:col-span-2 space-y-4 md:space-y-6 animate-fadeInUp">
             {/* Video Container */}
-            <div className="relative w-full bg-black rounded-2xl overflow-hidden border border-gray-800/50 shadow-2xl group">
+            <div className="relative w-full bg-black rounded-xl md:rounded-2xl overflow-hidden border border-gray-800/50 shadow-2xl group">
               <div
                 className="relative w-full"
                 style={{ paddingBottom: "56.25%" }}
@@ -58,78 +58,80 @@ export default function Stream() {
 
             {/* Video Info */}
             <div
-              className="space-y-4 animate-fadeInUp"
+              className="space-y-3 md:space-y-4 animate-fadeInUp"
               style={{ animationDelay: "100ms" }}
             >
               <div>
-                <h2 className="text-3xl font-display font-black text-white mb-2">
+                <h2 className="text-2xl md:text-3xl font-display font-black text-white mb-1 md:mb-2">
                   British Grand Prix 2025
                 </h2>
-                <p className="text-gray-400 text-lg">
+                <p className="text-gray-400 text-sm md:text-lg">
                   Watch the full race at Silverstone Circuit. Drama, speed, and
                   intense competition!
                 </p>
               </div>
 
               {/* Stats and Actions */}
-              <div className="flex flex-wrap gap-4 items-center py-4 border-t border-b border-gray-800/50">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 items-start sm:items-center py-3 md:py-4 border-t border-b border-gray-800/50">
                 <div className="flex items-center gap-2">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-f1-red to-red-700 flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">F1</span>
+                  <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-gradient-to-br from-f1-red to-red-700 flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-xs md:text-sm">
+                      F1
+                    </span>
                   </div>
                   <div>
-                    <p className="font-semibold">F1 TV</p>
+                    <p className="font-semibold text-sm md:text-base">F1 TV</p>
                     <p className="text-xs text-gray-500">Official Stream</p>
                   </div>
                 </div>
 
                 <div className="flex-1"></div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 md:gap-3">
                   <button
                     onClick={() => setLiked(!liked)}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-900/80 transition-all duration-300 group"
+                    className="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full hover:bg-gray-900/80 transition-all duration-300 group text-sm md:text-base"
                   >
                     <Heart
-                      size={20}
+                      size={18}
+                      className="md:w-5 md:h-5 group-hover:scale-110 transition-transform duration-300"
                       fill={liked ? "#C30C0C" : "none"}
                       color={liked ? "#C30C0C" : "currentColor"}
-                      className="group-hover:scale-110 transition-transform duration-300"
                     />
-                    <span className="text-sm font-semibold">
+                    <span className="font-semibold hidden sm:inline">
                       {liked ? "1.2K" : "1.1K"}
                     </span>
                   </button>
 
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-900/80 transition-all duration-300 group">
+                  <button className="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full hover:bg-gray-900/80 transition-all duration-300 group text-sm md:text-base">
                     <MessageCircle
-                      size={20}
-                      className="group-hover:scale-110 transition-transform duration-300"
+                      size={18}
+                      className="md:w-5 md:h-5 group-hover:scale-110 transition-transform duration-300"
                     />
-                    <span className="text-sm font-semibold">234</span>
+                    <span className="font-semibold hidden sm:inline">234</span>
                   </button>
 
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-900/80 transition-all duration-300 group">
+                  <button className="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full hover:bg-gray-900/80 transition-all duration-300 group text-sm md:text-base">
                     <Share
-                      size={20}
-                      className="group-hover:scale-110 transition-transform duration-300"
+                      size={18}
+                      className="md:w-5 md:h-5 group-hover:scale-110 transition-transform duration-300"
                     />
                   </button>
                 </div>
               </div>
 
               {/* Description */}
-              <div className="space-y-3">
-                <h3 className="font-display font-bold text-xl">
+              <div className="space-y-2 md:space-y-3">
+                <h3 className="font-display font-bold text-lg md:text-xl">
                   Race Highlights
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   Experience the intensity of the 2025 British Grand Prix at
                   Silverstone. Watch as teams battle for supremacy on one of
                   F1's most iconic circuits. From qualifying drama to race day
                   action, catch all the moments that matter.
                 </p>
-                <button className="text-f1-red font-semibold hover:text-red-400 transition-colors duration-300 text-sm">
+                <button className="text-f1-red font-semibold hover:text-red-400 transition-colors duration-300 text-xs md:text-sm">
                   Show more
                 </button>
               </div>
