@@ -281,29 +281,31 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Center Feed */}
-      <div className="flex-1 max-w-2xl border-r border-gray-800/50 flex flex-col">
+      {/* Center Feed - Responsive */}
+      <div className="flex-1 max-w-2xl border-r border-gray-800/50 flex flex-col w-full md:w-auto">
         {/* Header */}
-        <div className="sticky top-0 bg-dark-bg/90 backdrop-blur-md border-b border-gray-800/50 px-6 py-4 z-10 animate-fadeIn">
-          <h2 className="text-2xl font-display font-black text-f1-red">Home</h2>
+        <div className="sticky top-0 bg-dark-bg/90 backdrop-blur-md border-b border-gray-800/50 px-4 md:px-6 py-3 md:py-4 z-10 animate-fadeIn">
+          <h2 className="text-xl md:text-2xl font-display font-black text-f1-red pt-8 md:pt-0">
+            Home
+          </h2>
         </div>
 
         {/* Post Creation Area */}
-        <div className="border-b border-gray-800/50 p-6 animate-fadeInUp">
-          <div className="flex gap-4">
+        <div className="border-b border-gray-800/50 p-4 md:p-6 animate-fadeInUp">
+          <div className="flex gap-3 md:gap-4">
             <img
               src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=48&h=48&fit=crop"
               alt="Your avatar"
-              className="w-12 h-12 rounded-full ring-2 ring-f1-red/20"
+              className="w-10 md:w-12 h-10 md:h-12 rounded-full ring-2 ring-f1-red/20 flex-shrink-0"
             />
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               <textarea
                 placeholder="What's on your mind?"
-                className="w-full bg-transparent text-xl text-white placeholder-gray-600 resize-none outline-none font-medium"
+                className="w-full bg-transparent text-base md:text-xl text-white placeholder-gray-600 resize-none outline-none font-medium"
                 rows={3}
               />
-              <div className="flex justify-end mt-4">
-                <button className="bg-gradient-to-r from-f1-red to-red-600 text-white px-8 py-2.5 rounded-full font-display font-bold hover:shadow-lg hover:shadow-f1-red/50 transition-all duration-300 transform hover:scale-105 active:scale-95 uppercase tracking-wide text-sm">
+              <div className="flex justify-end mt-3 md:mt-4">
+                <button className="bg-gradient-to-r from-f1-red to-red-600 text-white px-6 md:px-8 py-2 md:py-2.5 rounded-full font-display font-bold hover:shadow-lg hover:shadow-f1-red/50 transition-all duration-300 transform hover:scale-105 active:scale-95 uppercase tracking-wide text-xs md:text-sm">
                   Post
                 </button>
               </div>
