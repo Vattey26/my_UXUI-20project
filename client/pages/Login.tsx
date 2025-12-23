@@ -25,8 +25,8 @@ export default function Login() {
 
   return (
     <div className="flex h-screen bg-gradient-to-br from-neutral-50 via-neutral-100 to-neutral-200">
-      {/* Left side - F1 NEWS branding */}
-      <div className="w-1/2 bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
+      {/* Left side - F1 NEWS branding - Hidden on mobile/tablet */}
+      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-black via-gray-900 to-black items-center justify-center relative overflow-hidden">
         {/* Animated background effect */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-f1-red rounded-full blur-3xl animate-pulse"></div>
@@ -48,30 +48,32 @@ export default function Login() {
         </div>
       </div>
 
-      {/* Right side - Login form */}
-      <div className="w-1/2 flex flex-col items-center justify-center px-16 animate-slideInLeft">
+      {/* Right side - Login form - Full width on mobile */}
+      <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-6 md:px-8 lg:px-16 py-8 md:py-10 lg:py-0 animate-slideInLeft overflow-y-auto">
         {/* Tab buttons */}
-        <div className="flex gap-2 mb-16 self-end mr-4 bg-white/80 backdrop-blur-md p-1.5 rounded-full shadow-lg">
-          <button className="px-8 py-3 bg-f1-red text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-f1-red/50">
+        <div className="flex gap-2 mb-8 md:mb-12 lg:mb-16 w-full md:w-auto md:self-end lg:mr-4 bg-white/80 backdrop-blur-md p-1.5 rounded-full shadow-lg order-2 md:order-1">
+          <button className="flex-1 md:flex-none px-6 md:px-8 py-2.5 md:py-3 bg-f1-red text-white rounded-full font-semibold text-xs md:text-sm transition-all duration-300 hover:shadow-lg hover:shadow-f1-red/50">
             Log in
           </button>
-          <Link to="/signup">
-            <button className="px-8 py-3 bg-transparent text-gray-900 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300">
+          <Link to="/signup" className="flex-1 md:flex-none">
+            <button className="w-full px-6 md:px-8 py-2.5 md:py-3 bg-transparent text-gray-900 rounded-full font-semibold text-xs md:text-sm hover:bg-gray-100 transition-all duration-300">
               Sign Up
             </button>
           </Link>
         </div>
 
         {/* Form container */}
-        <div className="w-full max-w-md">
-          <div className="mb-10">
-            <h2 className="text-5xl font-display font-black text-gray-900 mb-3">
+        <div className="w-full max-w-md order-1 md:order-2">
+          <div className="mb-8 md:mb-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-gray-900 mb-2 md:mb-3">
               Log In
             </h2>
-            <p className="text-gray-600 text-lg">Welcome fellow F1 lover</p>
+            <p className="text-gray-600 text-sm md:text-lg">
+              Welcome fellow F1 lover
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
             <div className="group">
               <label className="block text-gray-800 font-semibold mb-3 text-sm tracking-wide">
                 USERNAME
