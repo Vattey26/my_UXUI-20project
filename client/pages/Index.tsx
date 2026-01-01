@@ -8,7 +8,6 @@ import {
   LogOut,
   MoreHorizontal,
   Menu,
-  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
