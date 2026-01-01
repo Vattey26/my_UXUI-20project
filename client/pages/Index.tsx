@@ -207,10 +207,7 @@ export default function Index() {
                 Search
               </span>
             </div>
-            <Link
-              to="/stream"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/stream" onClick={() => setMobileMenuOpen(false)}>
               <div className="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 hover:translate-x-1 group">
                 <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-f1-red to-red-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white text-xs font-bold">▶</span>
@@ -260,10 +257,7 @@ export default function Index() {
               Profile
             </span>
           </div>
-          <Link
-            to="/login"
-            onClick={() => setMobileMenuOpen(false)}
-          >
+          <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
             <div className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-900/80 cursor-pointer transition-all duration-300 group">
               <LogOut
                 size={24}
