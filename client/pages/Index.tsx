@@ -152,24 +152,13 @@ export default function Index() {
   return (
     <div className="flex h-screen w-screen bg-dark-bg text-white overflow-hidden relative">
       {/* Mobile Menu Button */}
-      {!mobileMenuOpen && (
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="fixed top-4 left-4 z-50 md:hidden p-2 hover:bg-gray-900/80 rounded-lg transition-colors duration-300"
-        >
-          <Menu size={24} className="text-f1-red" />
-        </button>
-      )}
-
-      {/* Close Button Inside Sidebar for Mobile */}
-      {mobileMenuOpen && (
-        <button
-          onClick={() => setMobileMenuOpen(false)}
-          className="absolute top-6 left-6 z-50 md:hidden"
-        >
-          <X size={24} className="text-f1-red" />
-        </button>
-      )}
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="fixed top-4 left-4 z-50 md:hidden p-2 hover:bg-gray-900/80 rounded-lg transition-colors duration-300"
+      >
+        <Menu size={24} className="text-f1-red" />
+      </button>
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
