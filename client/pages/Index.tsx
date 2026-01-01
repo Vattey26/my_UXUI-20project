@@ -154,7 +154,7 @@ export default function Index() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="fixed top-4 left-4 z-50 md:hidden p-2 hover:bg-gray-900/80 rounded-lg transition-colors duration-300"
+        className="fixed top-4 right-4 z-50 md:hidden p-2 hover:bg-gray-900/80 rounded-lg transition-colors duration-300"
       >
         <Menu size={24} className="text-f1-red" />
       </button>
