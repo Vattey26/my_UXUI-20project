@@ -163,6 +163,16 @@ export default function Index() {
         )}
       </button>
 
+      {/* Close Button Inside Sidebar for Mobile */}
+      {mobileMenuOpen && (
+        <button
+          onClick={() => setMobileMenuOpen(false)}
+          className="absolute top-6 left-6 z-50 md:hidden"
+        >
+          <X size={24} className="text-f1-red" />
+        </button>
+      )}
+
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div
