@@ -5,6 +5,7 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: mode === "github-pages" ? "/my_UXUI-20project/" : "/",
   server: {
     host: "::",
     port: 8080,
